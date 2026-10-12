@@ -71,7 +71,7 @@ p { margin: 0; }
 .coil-art { width: 380px; max-width: 100%; height: auto; }
 
 .eyebrow { font: 500 15px/1.3 var(--display); letter-spacing: 3px; text-transform: uppercase; color: var(--copper-dark); }
-.eyebrow--light { color: var(--copper-light); }
+.eyebrow--light, .card .eyebrow--light { color: var(--copper-light); }
 
 /* ---------- faixa ---------- */
 .facts { background: var(--copper); color: var(--ink); padding-block: 28px; }
@@ -115,7 +115,8 @@ p { margin: 0; }
 .cutaway svg { width: 100%; height: auto; display: block; }
 .cutaway figcaption { margin-top: 12px; font-size: 14px; color: var(--ink-3); }
 .parts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px 20px; }
-.parts b { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--graphite); color: var(--ground); font-size: 13px; margin-right: 8px; }
+.parts li { display: flex; align-items: center; line-height: 1.3; }
+.parts b { flex: none; display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--graphite); color: var(--ground); font-size: 13px; margin-right: 8px; }
 .parts__hl { color: var(--copper-dark); font-weight: 600; }
 .parts__hl b { background: var(--copper); color: #fff; }
 .checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
@@ -186,8 +187,57 @@ details p { padding-bottom: 18px; color: var(--ink-2); }
   .menu .btn { margin-top: 14px; }
   .topbar__in { position: relative; }
   .clients__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .section { padding-block: 64px; }
-  .hero { padding-block: 48px 64px; }
+  .clients { padding-block: 48px; }
+  .clients__title { font-size: 18px; margin-bottom: 20px; }
+  .wrap { padding-inline: 20px; }
+  .section { padding-block: 56px; }
+  .section__head { margin-bottom: 28px; }
+  .section__lead { font-size: 17px; }
+  .eyebrow { font-size: 13px; letter-spacing: 2px; }
   .wa-float span { display: none; }
   .wa-float { padding: 16px; }
+
+  /* hero: ilustração menor e botões do mesmo tamanho */
+  .hero { padding-block: 40px 48px; }
+  .hero__in { gap: 32px; }
+  .hero__text { gap: 20px; }
+  .lead { font-size: 18px; }
+  .actions .btn { flex: 1 1 100%; }
+  .coil-art { width: 210px; }
+
+  /* faixa em 2×2 */
+  .facts { padding-block: 22px; }
+  .facts__in { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .facts strong { font-size: 21px; }
+  .facts span { font-size: 13px; line-height: 1.35; display: block; }
+
+  /* cartões mais compactos */
+  .cards { gap: 14px; }
+  .card { padding: 22px; gap: 10px; }
+  .card h3 { font-size: 23px; }
+  .card__icon { width: 36px; height: 36px; }
+  .card--line h3 { font-size: 26px; }
+
+  /* ilustrações de ponta a ponta, para ficarem maiores */
+  .split { gap: 32px; }
+  .cutaway { margin-inline: -20px; border-radius: 0; padding: 12px 8px 16px; }
+  .cutaway figcaption { padding-inline: 12px; font-size: 13px; }
+  .h-sub { font-size: 22px; }
+
+  /* sob medida em 2 colunas */
+  .specs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .specs div { padding: 14px; font-size: 15px; line-height: 1.35; gap: 4px; }
+  .specs span { font-size: 13px; }
+
+  /* etapas: número ao lado do texto */
+  .steps { gap: 10px; }
+  .steps li { display: grid; grid-template-columns: 44px 1fr; column-gap: 12px; row-gap: 2px; padding: 16px 18px; }
+  .steps__n { grid-row: span 2; font-size: 28px; }
+  .steps b { font-size: 17px; }
+
+  /* perguntas e formulário */
+  details { padding: 2px 18px; }
+  summary { padding: 14px 0; }
+  .form { padding: 20px; }
+  .footer { padding-block: 32px 96px; }
 }
