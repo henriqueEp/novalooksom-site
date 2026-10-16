@@ -50,6 +50,12 @@ p { margin: 0; }
 
 /* ---------- faixa B2B ---------- */
 .b2b-bar { margin: 0; background: #0E1012; color: var(--on-dark-2); font-size: 13px; text-align: center; padding: 7px 16px; letter-spacing: .2px; }
+.b2b-bar--intl { display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; padding-inline: max(16px, calc((100% - 1200px) / 2 + 24px)); }
+.b2b-bar--intl > span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.langs { display: flex; gap: 14px; flex: none; }
+.langs a { color: var(--on-dark-2); text-decoration: none; font-weight: 500; }
+.langs a:hover { color: var(--copper-light); }
+.langs a[aria-current] { color: var(--copper-light); font-weight: 600; }
 
 /* ---------- topo ---------- */
 .topbar { background: var(--graphite); color: var(--on-dark); position: sticky; top: 0; z-index: 20; border-bottom: 1px solid #23282C; }
@@ -67,7 +73,7 @@ p { margin: 0; }
   .brand span { font-size: 20px; }
   .brand svg { width: 30px; height: 30px; }
 }
-.menu-btn { display: none; background: none; border: 0; color: var(--on-dark); padding: 8px; cursor: pointer; }
+.menu-btn { flex: none; display: none; background: none; border: 0; color: var(--on-dark); padding: 8px; cursor: pointer; }
 
 /* ---------- hero ---------- */
 .hero { background: var(--graphite); color: var(--on-dark); padding-block: 72px 96px; overflow: hidden; }
@@ -101,6 +107,8 @@ p { margin: 0; }
 .section__head { display: flex; flex-direction: column; gap: 12px; max-width: 760px; margin-bottom: 40px; }
 .section h2 { font: 600 clamp(32px, 4vw, 48px)/1.1 var(--display); }
 .section__lead { color: var(--ink-2); font-size: 18px; }
+.section--dark .section__lead { color: var(--on-dark-2); }
+.section__head .section__lead + .section__lead { margin-top: 4px; }
 .h-sub { font: 500 24px/1.2 var(--display); margin-top: 8px; }
 
 /* ---------- cartões ---------- */
@@ -192,6 +200,7 @@ details p { padding-bottom: 18px; color: var(--ink-2); }
 /* ---------- contato ---------- */
 .contact { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
 .contact li { display: flex; flex-direction: column; }
+.contact--box { flex: 1 1 380px; min-width: 0; background: var(--ground); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
 .contact b { font-size: 14px; color: var(--ink-3); font-weight: 500; }
 .contact a { color: var(--ink); text-decoration: none; font-size: 18px; }
 .contact a:hover { color: var(--copper-dark); text-decoration: underline; }

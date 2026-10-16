@@ -37,14 +37,19 @@
       var msg = document.getElementById('f-msg').value.trim();
       if (!nome || !msg) { err.hidden = false; return; }
 
-      var texto = 'Olá, vim pelo site da Nova Look Som.\n' +
-        'Nome: ' + nome + '\n' +
-        (empresa ? 'Empresa: ' + empresa + '\n' : '') +
-        (cnpj ? 'CNPJ: ' + cnpj + '\n' : '') +
-        'Sou: ' + tipo + '\n' +
-        'Interesse: ' + interesse + '\n' +
-        (qtd ? 'Quantidade: ' + qtd + '\n' : '') +
-        'Pedido: ' + msg;
+      // Rótulos da mensagem no idioma da página (data-lang="es" na versão em espanhol)
+      var t = form.dataset.lang === 'es'
+        ? { oi: 'Hola, vengo del sitio de Nova Look Som (español).', nome: 'Nombre', empresa: 'Empresa', cnpj: 'Identificación fiscal', tipo: 'Soy', interesse: 'Interés', qtd: 'Cantidad', pedido: 'Pedido' }
+        : { oi: 'Olá, vim pelo site da Nova Look Som.', nome: 'Nome', empresa: 'Empresa', cnpj: 'CNPJ', tipo: 'Sou', interesse: 'Interesse', qtd: 'Quantidade', pedido: 'Pedido' };
+
+      var texto = t.oi + '\n' +
+        t.nome + ': ' + nome + '\n' +
+        (empresa ? t.empresa + ': ' + empresa + '\n' : '') +
+        (cnpj ? t.cnpj + ': ' + cnpj + '\n' : '') +
+        t.tipo + ': ' + tipo + '\n' +
+        t.interesse + ': ' + interesse + '\n' +
+        (qtd ? t.qtd + ': ' + qtd + '\n' : '') +
+        t.pedido + ': ' + msg;
       window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank', 'noopener');
     });
   }
