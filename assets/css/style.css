@@ -48,6 +48,9 @@ p { margin: 0; }
 .btn--dark { background: var(--graphite); color: var(--ground); align-self: flex-start; }
 .btn--dark:hover { background: #000; color: var(--ground); }
 
+/* ---------- faixa B2B ---------- */
+.b2b-bar { margin: 0; background: #0E1012; color: var(--on-dark-2); font-size: 13px; text-align: center; padding: 7px 16px; letter-spacing: .2px; }
+
 /* ---------- topo ---------- */
 .topbar { background: var(--graphite); color: var(--on-dark); position: sticky; top: 0; z-index: 20; border-bottom: 1px solid #23282C; }
 .topbar__in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
@@ -57,7 +60,7 @@ p { margin: 0; }
 .brand:hover { color: var(--on-dark); }
 .menu { display: flex; align-items: center; gap: 26px; font-size: 15px; }
 .menu a:not(.btn) { color: var(--on-dark); text-decoration: none; padding: 10px 0; }
-.menu a:not(.btn):hover { color: var(--copper-light); }
+.menu a:not(.btn):hover, .menu a[aria-current="page"] { color: var(--copper-light); }
 .brand span, .menu a { white-space: nowrap; }
 @media (min-width: 861px) and (max-width: 1100px) {
   .menu { gap: 16px; font-size: 14px; }
@@ -78,6 +81,10 @@ p { margin: 0; }
 .hero__art { flex: 1 1 340px; min-width: 0; display: flex; justify-content: center; }
 .coil-art { width: 380px; max-width: 100%; height: auto; }
 
+.hero--page { padding-block: 48px 72px; }
+.crumbs { font-size: 14px; color: var(--on-dark-2); }
+.crumbs a { color: var(--on-dark-2); }
+.crumbs a:hover { color: var(--copper-light); }
 .eyebrow { font: 500 15px/1.3 var(--display); letter-spacing: 3px; text-transform: uppercase; color: var(--copper-dark); }
 .eyebrow--light, .card .eyebrow--light { color: var(--copper-light); }
 
@@ -99,6 +106,7 @@ p { margin: 0; }
 /* ---------- cartões ---------- */
 .cards { display: grid; gap: 24px; }
 .cards--4 { grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); }
+.cards--3 { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
 .cards--2 { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
 .card { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; gap: 14px; }
 .card h3 { font: 500 27px/1.15 var(--display); }
@@ -113,6 +121,7 @@ p { margin: 0; }
 .link-arrow { color: var(--copper-light); font-weight: 600; margin-top: auto; }
 .link-arrow:hover { color: #F4C29C; }
 .link-arrow--dark { color: var(--copper-dark); }
+.link-arrow--inline { margin-top: 0; align-self: center; }
 .link-arrow--dark:hover { color: var(--copper); }
 
 /* ---------- matéria-prima ---------- */
@@ -194,9 +203,23 @@ details p { padding-bottom: 18px; color: var(--ink-2); }
 .form__err { color: #B0392C; font-size: 14px; }
 .form__note { font-size: 13px; color: var(--ink-3); }
 
+/* ---------- chamada final ---------- */
+.cta-band { background: var(--copper); color: var(--ink); padding-block: 56px; }
+.cta-band__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px; }
+.cta-band h2 { font: 600 clamp(28px, 3.4vw, 40px)/1.1 var(--display); }
+.cta-band p { margin-top: 8px; color: #2A1608; max-width: 560px; }
+.cta-band__actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.cta-band .btn--copper { background: var(--graphite); color: var(--ground); }
+.cta-band .btn--copper:hover { background: #000; color: var(--ground); }
+.cta-band .link-arrow { color: var(--graphite); }
+.cta-band .link-arrow:hover { color: #000; }
+
 /* ---------- rodapé ---------- */
 .footer { background: var(--graphite); color: #9EA2A6; padding-block: 36px 96px; font-size: 14px; }
 .footer__in { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; }
+.footer__nav { display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.footer__nav a { color: var(--on-dark-2); text-decoration: none; }
+.footer__nav a:hover { color: var(--copper-light); text-decoration: underline; }
 .footer__brand { font: 600 20px/1 var(--display); color: var(--on-dark); letter-spacing: 1px; }
 
 /* ---------- WhatsApp flutuante ---------- */
@@ -206,6 +229,7 @@ details p { padding-bottom: 18px; color: var(--ink-2); }
 /* ---------- celular ---------- */
 @media (max-width: 860px) {
   .menu-btn { display: block; }
+  .b2b-bar__who { display: none; }
   .menu { display: none; position: absolute; left: 0; right: 0; top: 100%; background: var(--graphite); flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 20px; border-bottom: 1px solid #23282C; }
   .menu.is-open { display: flex; }
   .menu a:not(.btn) { padding: 14px 0; border-bottom: 1px solid #23282C; }
@@ -275,7 +299,12 @@ details p { padding-bottom: 18px; color: var(--ink-2); }
 
 /* ---------- celular (até 560px) ---------- */
 @media (max-width: 560px) {
+  .cta-band__actions, .cta-band__actions .btn { width: 100%; }
   .actions .btn, .steps__cta .btn { flex: 1 1 100%; }
   .clients__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .form__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 374px) {
+  .b2b-bar__more { display: none; }
 }

@@ -32,14 +32,18 @@
       var empresa = document.getElementById('f-empresa').value.trim();
       var tipo = document.getElementById('f-tipo').value;
       var interesse = document.getElementById('f-interesse').value;
+      var qtd = document.getElementById('f-qtd').value.trim();
+      var cnpj = document.getElementById('f-cnpj').value.trim();
       var msg = document.getElementById('f-msg').value.trim();
       if (!nome || !msg) { err.hidden = false; return; }
 
       var texto = 'Olá, vim pelo site da Nova Look Som.\n' +
         'Nome: ' + nome + '\n' +
         (empresa ? 'Empresa: ' + empresa + '\n' : '') +
+        (cnpj ? 'CNPJ: ' + cnpj + '\n' : '') +
         'Sou: ' + tipo + '\n' +
         'Interesse: ' + interesse + '\n' +
+        (qtd ? 'Quantidade: ' + qtd + '\n' : '') +
         'Pedido: ' + msg;
       window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(texto), '_blank', 'noopener');
     });
