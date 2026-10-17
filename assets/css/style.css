@@ -317,3 +317,14 @@ details p { padding-bottom: 18px; color: var(--ink-2); }
 @media (max-width: 374px) {
   .b2b-bar__more { display: none; }
 }
+
+/* ---------- quem somos ---------- */
+.about { padding-block: 64px; }
+.about__in { display: flex; flex-direction: column; gap: 12px; }
+.about__in > * { max-width: 860px; }
+.about h2 { font-size: clamp(28px, 3.2vw, 38px); }
+
+/* ---------- 404 ---------- */
+.card--link { color: var(--ink); text-decoration: none; transition: border-color .15s; }
+.card--link:hover { border-color: var(--copper); color: var(--ink); }
+.card--link p { color: var(--ink-2); }
