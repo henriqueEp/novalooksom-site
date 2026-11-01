@@ -9,7 +9,7 @@
   <link rel="alternate" hreflang="pt-BR" href="https://www.novalooksom.com.br/">
   <link rel="alternate" hreflang="es" href="https://www.novalooksom.com.br/es/">
   <link rel="alternate" hreflang="x-default" href="https://www.novalooksom.com.br/">
-  <meta name="theme-color" content="#16191C">
+  <meta name="theme-color" content="#15171a">
 
   <!-- Compartilhamento (WhatsApp, Facebook, LinkedIn) -->
   <meta property="og:type" content="website">
@@ -25,8 +25,9 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Oswald:wght@500;600&display=swap">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/css/v2.css">
+  <script>document.documentElement.classList.add('js');</script>
 
   <!-- Dados da empresa para o Google -->
   <script type="application/ld+json">
@@ -143,479 +144,646 @@
   <!-- /seo:auto -->
 </head>
 <body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<!-- Símbolos reutilizados: o "N" da marca (corte da bobina) e ícones -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Símbolo: os três círculos da marca. O aro (forte), o cone (fino) e, em cobre, a bobina no centro -->
+  <symbol id="marca" viewBox="0 0 48 48">
+    <g fill="none">
+      <circle cx="24" cy="24" r="17" stroke="currentColor" stroke-width="3.4"/>
+      <circle cx="24" cy="24" r="11.2" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="24" cy="24" r="5.3" stroke-width="3.4" style="stroke: var(--centro, #c26a2e)"/>
+    </g>
+  </symbol>
+  <symbol id="ic-zap" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.7-5.2A8.5 8.5 0 1 1 21 12z"/><path d="M9 10.5c.5 2 2 3.5 4 4l1.2-1.1 2 1-.4 1.6c-3.7.2-7.5-3.5-7.3-7.3l1.6-.4 1 2z"/></g></symbol>
+  <symbol id="ic-virar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.3L20 9"/><path d="M20 4v5h-5"/><path d="M20 12a8 8 0 0 1-14 5.3L4 15"/><path d="M4 20v-5h5"/></g></symbol>
+</svg>
 
-<div class="b2b-bar b2b-bar--intl"><span>Venda para empresas<span class="b2b-bar__who">: fabricantes de alto-falantes e lojas</span><span class="b2b-bar__more"> · Atacado e lotes sob medida</span></span><nav class="langs" aria-label="Idioma"><a href="index.html" lang="pt-BR" aria-current="true">PT</a> <a href="es/index.html" lang="es" hreflang="es">ES</a> <a href="en/index.html" lang="en" hreflang="en">EN</a> <a href="zh/index.html" lang="zh-CN" hreflang="zh-CN">中文</a></nav></div>
+<!-- ======================= FAIXA B2B + IDIOMAS ======================= -->
+<div class="faixa">
+  <div class="wrap">
+    <span class="faixa__txt">Venda para empresas: fabricantes de alto-falantes e lojas<span class="faixa__mais"> · Atacado e lotes sob medida</span></span>
+    <nav class="idiomas" aria-label="Idioma">
+      <a href="index.html" lang="pt-BR" aria-current="true">PT</a>
+      <a href="es/index.html" lang="es" hreflang="es">ES</a>
+      <a href="en/index.html" lang="en" hreflang="en">EN</a>
+      <a href="zh/index.html" lang="zh-CN" hreflang="zh-CN">中文</a>
+    </nav>
+  </div>
+</div>
 
-<header class="topbar">
-  <div class="wrap topbar__in">
-    <a href="#topo" class="brand" aria-label="Nova Look Som, início">
-      <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="16"/><circle cx="18" cy="18" r="11"/><circle cx="18" cy="18" r="6"/></g></svg>
-      <span>NOVA LOOK SOM</span>
+<!-- ======================= TOPO ======================= -->
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#topo" aria-label="Nova Look Som, início">
+      <svg aria-hidden="true"><use href="#marca"/></svg>
+      <span><span class="marca__nome">Nova Look Som</span><span class="marca__desc">Bobinas · Reparos · Drivers</span></span>
     </a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
-    <nav id="menu" class="menu" aria-label="Seções do site">
+    <nav class="menu" id="menu" aria-label="Seções do site">
       <a href="#produtos">Produtos</a>
-      <a href="bobinas-para-alto-falantes.html">Bobinas</a>
-      <a href="reparos-para-drivers-e-tweeters.html">Reparos</a>
+      <a href="#bobina">Bobinas</a>
+      <a href="#reparos">Reparos</a>
       <a href="#sob-medida">Sob medida</a>
       <a href="#como-pedir">Como pedir</a>
       <a href="#perguntas">Dúvidas</a>
-      <a href="#contato" class="btn btn--copper btn--sm">Pedir orçamento</a>
+      <a class="btn btn--grafite btn--sm" href="#contato">Pedir orçamento</a>
     </nav>
   </div>
 </header>
 
 <main id="conteudo">
 
-<!-- ===================== TOPO ===================== -->
-<section id="topo" class="hero">
-  <div class="wrap hero__in">
-    <div class="hero__text">
-      <p class="eyebrow eyebrow--light">Fábrica em Taboão da Serra, SP · 28 anos</p>
-      <h1>Fabricação de bobinas para alto-falantes <span class="h1__sub">e reparos para drivers e tweeters</span></h1>
+<!-- ======================= HERO: foto real anotada como desenho técnico ======================= -->
+<section class="hero" id="topo">
+  <div class="wrap hero__grid">
+    <div class="hero__txt">
+      <p class="rotulo">Fábrica em Taboão da Serra, SP · 28 anos</p>
+      <h1>Fabricação de bobinas para <span class="nq">alto-falantes</span> <span class="h1__sub">e reparos para drivers e tweeters</span></h1>
       <p class="lead">Há 28 anos no mercado, fabricando com excelência e sob medida, no projeto ou na amostra de cada cliente. Atendemos clientes em todo o Brasil e na América Latina.</p>
-      <div class="actions">
-        <a class="btn btn--copper btn--lg" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
-        <a class="btn btn--outline btn--lg" href="#produtos">Ver produtos</a>
+      <div class="acoes">
+        <a class="btn btn--cobre" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#ic-zap"/></svg>Pedir orçamento no WhatsApp
+        </a>
+        <a class="btn btn--linha" href="#produtos">Ver produtos</a>
       </div>
-      <p class="hero__note">Orçamento sem compromisso. Envie o projeto, uma amostra ou uma foto da peça.</p>
+      <p class="hero__nota">Orçamento sem compromisso. Envie o projeto, uma amostra ou uma foto da peça.</p>
     </div>
-    <div class="hero__art" aria-hidden="true">
-      <svg viewBox="0 0 400 400" class="coil-art">
-        <defs>
-          <linearGradient id="cu" x1="0" x2="1">
-            <stop offset="0" stop-color="#8E4718"/><stop offset="0.45" stop-color="#E9A877"/><stop offset="1" stop-color="#8E4718"/>
-          </linearGradient>
-        </defs>
-        <g fill="none" stroke="#2A2F34" stroke-width="2">
-          <circle cx="200" cy="200" r="190"/><circle cx="200" cy="200" r="165"/><circle cx="200" cy="200" r="140"/>
-        </g>
-        <ellipse cx="200" cy="112" rx="92" ry="22" fill="#D9CBB0"/>
-        <rect x="108" y="112" width="184" height="118" fill="#CDBD9F"/>
-        <rect x="108" y="230" width="184" height="62" fill="url(#cu)"/>
-        <g stroke="#7A3A12" stroke-width="1.2" opacity="0.7">
-          <path d="M108 238h184M108 246h184M108 254h184M108 262h184M108 270h184M108 278h184M108 286h184"/>
-        </g>
-        <ellipse cx="200" cy="292" rx="92" ry="22" fill="#9C5222"/>
-        <ellipse cx="200" cy="112" rx="70" ry="15" fill="#16191C"/>
-        <path d="M170 104 C 160 70, 150 50, 140 30" stroke="#C47A45" stroke-width="2.5" fill="none"/>
-        <path d="M230 104 C 240 70, 250 50, 262 30" stroke="#C47A45" stroke-width="2.5" fill="none"/>
-      </svg>
+
+    <figure class="hero__foto">
+      <div class="anotada" data-anotada style="--ar: 5 / 4">
+        <img src="assets/img/fotos/bobina-corpo-escuro-colar-destaque.webp" width="1782" height="1426" fetchpriority="high"
+             alt="Bobina para alto-falante fotografada de frente: corpo escuro com uma faixa clara no topo, enrolamento de fio de cobre embaixo e os dois cabinhos subindo pelas bordas">
+        <!-- Chamadas e cota: coordenadas em % da foto (largura 100, altura 80) -->
+        <svg class="anotada__linhas" viewBox="0 0 100 80" aria-hidden="true">
+          <g style="--d:.25s"><path class="lider" pathLength="1" d="M64.4 20 L70 15.5 L74 15.5"/><circle class="alvo" cx="64.4" cy="20" r="1.15"/><circle class="alvo-ponto" cx="64.4" cy="20" r=".35"/></g>
+          <g style="--d:.45s"><path class="lider" pathLength="1" d="M42.1 42 L28 42"/><circle class="alvo" cx="42.1" cy="42" r="1.15"/><circle class="alvo-ponto" cx="42.1" cy="42" r=".35"/></g>
+          <g class="is-cobre" style="--d:.65s"><path class="lider" pathLength="1" d="M57.9 59.5 L70 59.5 L74 59.5"/><circle class="alvo" cx="57.9" cy="59.5" r="1.15"/><circle class="alvo-ponto" cx="57.9" cy="59.5" r=".35"/></g>
+        </svg>
+        <!-- Cota do diâmetro embaixo da bobina (em cima, os cabinhos saem justo das bordas) -->
+        <svg class="anotada__cota" viewBox="0 0 100 80" aria-hidden="true">
+          <path class="cota-linha" d="M36.4 70.6 V74.6 M64.9 70.6 V74.6 M36.4 73.4 H64.9"/>
+          <path class="cota-seta" d="M36.4 73.4 L38.3 72.7 L38.3 74.1 Z M64.9 73.4 L63 72.7 L63 74.1 Z"/>
+        </svg>
+        <span class="cota-txt cota-txt--abaixo" style="left:50.65%;top:91.75%" aria-hidden="true">Ø do seu projeto</span>
+        <p class="chamada" style="left:74.6%;top:19.4%;--d:.25s" aria-hidden="true"><b>01</b><span>Cabinhos</span><small>No comprimento do seu projeto</small></p>
+        <p class="chamada chamada--esq" style="right:72.6%;top:52.5%;--d:.45s" aria-hidden="true"><b>02</b><span>Corpo</span><small>Kapton, alumínio ou fibra</small></p>
+        <p class="chamada is-cobre" style="left:74.6%;top:74.4%;--d:.65s" aria-hidden="true"><b>03</b><span>Enrolamento</span><small>Fio de cobre, alumínio ou CCAW</small></p>
+        <span class="marcador" style="left:64.4%;top:25%" aria-hidden="true">1</span>
+        <span class="marcador" style="left:42.1%;top:52.5%" aria-hidden="true">2</span>
+        <span class="marcador is-cobre" style="left:57.9%;top:74.4%" aria-hidden="true">3</span>
+      </div>
+      <ol class="legenda-pecas" aria-label="Partes da bobina">
+        <li><b>1</b>Cabinhos</li>
+        <li><b>2</b>Corpo</li>
+        <li class="is-cobre"><b>3</b>Enrolamento</li>
+      </ol>
+      <figcaption class="foto-leg"><span>Foto do produto · bobina para alto-falante</span><span>Medidas do seu projeto</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ======================= DESTAQUES ======================= -->
+<section class="destaques" aria-label="Destaques">
+  <div class="enrolamento" aria-hidden="true"></div>
+  <ul class="wrap">
+    <li><strong>28 anos</strong><span>No mercado</span></li>
+    <li><strong>Todo o Brasil</strong><span>E países da América Latina</span></li>
+    <li><strong>Sob medida</strong><span>No diâmetro do seu projeto</span></li>
+    <li><strong>Drivers e reparos</strong><span>Para drivers e tweeters</span></li>
+  </ul>
+</section>
+
+<!-- ======================= QUEM SOMOS ======================= -->
+<section class="secao" id="quem-somos" aria-labelledby="quem-titulo">
+  <div class="wrap quem">
+    <div>
+      <p class="rotulo">Quem somos</p>
+      <h2 class="titulo" id="quem-titulo">Fábrica de bobinas e reparos em Taboão da Serra, SP</h2>
+      <!-- Parágrafo factual: é o trecho que buscadores e assistentes de IA costumam citar -->
+      <p class="lead">A Nova Look Som é uma fábrica de bobinas para alto-falantes e de reparos para drivers e tweeters, com 28 anos no mercado. Fica em Taboão da Serra, na Grande São Paulo, e vende para fabricantes de alto-falantes e lojas de som de todo o Brasil e de países da América Latina. Também vende drivers.</p>
+      <p class="lead">Tudo é feito sob medida: o cliente envia o projeto, uma amostra ou uma foto da peça e recebe o orçamento pelo WhatsApp (11) 97719-4026.</p>
     </div>
+    <figure class="placa-foto">
+      <img src="assets/img/fotos/bobina-corpo-claro-vertical.webp" width="880" height="1100" loading="lazy" decoding="async"
+           alt="Bobina para alto-falante de corpo claro, com o enrolamento de fio de cobre embaixo e dois cabinhos saindo pela borda de cima">
+      <figcaption>Foto do produto · bobina para alto-falante, feita na fábrica</figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- ===================== FAIXA ===================== -->
-<section class="facts" aria-label="Destaques">
-  <div class="wrap facts__in">
-    <div><strong>28 anos</strong><span>No mercado</span></div>
-    <div><strong>Todo o Brasil</strong><span>E países da América Latina</span></div>
-    <div><strong>Sob medida</strong><span>No diâmetro do seu projeto</span></div>
-    <div><strong>Drivers e reparos</strong><span>Para drivers e tweeters</span></div>
-  </div>
-</section>
-
-<!-- ===================== QUEM SOMOS ===================== -->
-<section id="quem-somos" class="section section--white about">
-  <div class="wrap about__in">
-    <p class="eyebrow">Quem somos</p>
-    <h2>Fábrica de bobinas e reparos em Taboão da Serra, SP</h2>
-    <p class="section__lead">A Nova Look Som é uma fábrica de bobinas para alto-falantes e de reparos para drivers e tweeters, com 28 anos no mercado. Fica em Taboão da Serra, na Grande São Paulo, e vende para fabricantes de alto-falantes e lojas de som de todo o Brasil e de países da América Latina. Também vende drivers.</p>
-    <p class="section__lead">Tudo é feito sob medida: o cliente envia o projeto, uma amostra ou uma foto da peça e recebe o orçamento pelo WhatsApp (11) 97719-4026.</p>
-  </div>
-</section>
-
-<!-- ===================== PRODUTOS ===================== -->
-<section id="produtos" class="section">
+<!-- ======================= PRODUTOS ======================= -->
+<section class="secao secao--papel" id="produtos" aria-labelledby="produtos-titulo">
   <div class="wrap">
-    <header class="section__head">
-      <p class="eyebrow">Produtos</p>
-      <h2>Bobinas, reparos e drivers direto da fábrica</h2>
-    </header>
-    <div class="cards cards--4">
-      <article class="card">
-        <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
-        <h3>Bobinas para alto-falantes</h3>
+    <div class="cab">
+      <p class="rotulo">Produtos</p>
+      <h2 class="titulo" id="produtos-titulo">Bobinas, reparos e drivers direto da fábrica</h2>
+      <p class="lead">Você negocia com quem produz, sem intermediário. Do lote pequeno ao pedido programado.</p>
+    </div>
+
+    <ul class="indice">
+      <li>
+        <h3>Bobinas para <span class="nq">alto-falantes</span></h3>
         <p>Simples ou duplas, para woofers, subwoofers e médios. Corpo em kapton, alumínio ou fibra, no diâmetro e no enrolamento do seu projeto.</p>
-        <a class="link-arrow link-arrow--dark" href="bobinas-para-alto-falantes.html">Ver bobinas</a>
-      </article>
-      <article class="card">
-        <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16c3-9 13-9 16 0"/><path d="M8 16c1.5-4 6.5-4 8 0"/><path d="M3 16h18"/></svg>
+        <a class="seta" href="#bobina">Ver bobinas</a>
+      </li>
+      <li>
         <h3>Reparos para drivers</h3>
         <p>Diafragma fenólico, poliimida ou titânio, com bobina da casa, no modelo do seu driver. Envie o projeto ou uma amostra.</p>
-        <a class="link-arrow link-arrow--dark" href="reparos-para-drivers-e-tweeters.html">Ver reparos</a>
-      </article>
-      <article class="card">
-        <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15a6 6 0 0 1 12 0"/><circle cx="12" cy="15" r="2"/><path d="M4 18h16"/></svg>
+        <a class="seta" href="#reparos">Ver reparos</a>
+      </li>
+      <li>
         <h3>Reparos para tweeters</h3>
         <p>Reparos sob medida para tweeters, com diafragma fenólico, poliimida ou titânio, para o agudo voltar a tocar como novo.</p>
-        <a class="link-arrow link-arrow--dark" href="reparos-para-drivers-e-tweeters.html">Ver reparos</a>
-      </article>
-      <article class="card card--dark">
-        <svg class="card__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2.5"/></svg>
+        <a class="seta" href="#reparos">Ver reparos</a>
+      </li>
+      <li>
         <h3>Drivers</h3>
         <p>Drivers completos para quem monta ou reforma sistemas de som. Consulte os modelos disponíveis.</p>
-        <a class="link-arrow" href="#contato">Consultar modelos</a>
+        <a class="seta" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20consultar%20os%20modelos%20de%20drivers." target="_blank" rel="noopener">Consultar modelos</a>
+      </li>
+    </ul>
+
+    <div class="materia" id="materia-prima">
+      <div>
+        <h3>Corpo da bobina</h3>
+        <ul class="amostras">
+          <li><i class="amostra am-kapton" aria-hidden="true"></i>Kapton</li>
+          <li><i class="amostra am-aluminio" aria-hidden="true"></i>Alumínio</li>
+          <li><i class="amostra am-fibra" aria-hidden="true"></i>Fibra</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Fios</h3>
+        <ul class="amostras">
+          <li><i class="amostra am-cobre" aria-hidden="true"></i>Cobre</li>
+          <li><i class="amostra am-fio-aluminio" aria-hidden="true"></i>Alumínio</li>
+          <li><i class="amostra am-ccaw" aria-hidden="true"></i>CCAW</li>
+        </ul>
+        <p class="materia__nota">De acordo com o seu projeto.</p>
+      </div>
+      <div>
+        <h3>Diafragma dos reparos</h3>
+        <ul class="amostras">
+          <li><img class="amostra" src="assets/img/fotos/domo-fenolico.webp" width="220" height="220" alt="" loading="lazy">Fenólicos</li>
+          <li><img class="amostra" src="assets/img/fotos/domo-poliimida.webp" width="220" height="220" alt="" loading="lazy">Poliimida</li>
+          <li><img class="amostra" src="assets/img/fotos/domo-titanio.webp" width="240" height="240" alt="" loading="lazy">Titânio</li>
+        </ul>
+        <p class="materia__nota">As amostras de diafragma são fotos das peças.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BOBINA: desenho técnico em corte ======================= -->
+<section class="secao secao--grafite" id="bobina" aria-labelledby="bobina-titulo">
+  <div class="wrap">
+    <div class="cab">
+      <p class="rotulo">Bobinas para alto-falantes</p>
+      <h2 class="titulo" id="bobina-titulo">A bobina certa para o seu alto-falante</h2>
+      <p class="lead">Produzimos bobinas para woofers, subwoofers e médios, no diâmetro, no material e no enrolamento do seu projeto. É a peça que define como o alto-falante toca, por isso cada uma sai da fábrica pronta para o seu modelo.</p>
+    </div>
+    <!-- Vitrine: fotos das bobinas -->
+    <div class="vitrine">
+      <figure class="vitrine__item">
+        <div class="vitrine__foto">
+          <img src="assets/img/fotos/bobina-corpo-claro.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Bobina para alto-falante de corpo claro, com enrolamento de fio de cobre e dois cabinhos retos">
+        </div>
+      </figure>
+      <figure class="vitrine__item">
+        <div class="vitrine__foto">
+          <img src="assets/img/fotos/bobina-corpo-escuro-faixa.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Bobina para alto-falante de corpo escuro, com uma faixa clara acima do enrolamento de cobre e dois cabinhos retos">
+        </div>
+      </figure>
+      <figure class="vitrine__item">
+        <div class="vitrine__foto">
+          <img src="assets/img/fotos/bobina-corpo-escuro-colar.webp" width="900" height="1125" loading="lazy" decoding="async" alt="Bobina para alto-falante de corpo escuro com borda clara no topo, enrolamento de cobre e os dois cabinhos subindo rente às bordas">
+        </div>
+      </figure>
+      <p class="vitrine__leg"><span>Fotos do produto · bobinas feitas na fábrica, cada uma no projeto do cliente</span></p>
+    </div>
+
+    <div class="bobina">
+      <figure class="desenho">
+        <svg viewBox="0 0 640 420" role="img" aria-labelledby="corte-titulo">
+          <title id="corte-titulo">Corte simplificado de um alto-falante, com a bobina em destaque dentro do campo do ímã, presa ao cone e à aranha</title>
+          <defs>
+            <pattern id="hach-a" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#a3a8ad" stroke-width="1" opacity=".5"/></pattern>
+            <pattern id="hach-b" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(-45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#a3a8ad" stroke-width="1" opacity=".42"/></pattern>
+          </defs>
+          <!-- eixo (traço e ponto) -->
+          <path d="M320 150 V398" fill="none" stroke="#a3a8ad" stroke-width="1" stroke-dasharray="14 4 2 4" opacity=".55"/>
+          <!-- carcaça, suspensão, cone, calota e aranha -->
+          <g fill="none" stroke="#a3a8ad" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M58 64 H118 L236 262"/><path d="M582 64 H522 L404 262"/>
+            <path d="M118 64 Q134 40 150 64"/><path d="M490 64 Q506 40 522 64"/>
+            <path d="M150 64 L268 236" stroke-width="2.2"/><path d="M490 64 L372 236" stroke-width="2.2"/>
+            <path d="M268 236 Q320 176 372 236" stroke-width="1.7"/>
+            <path d="M268 256 q-4.25 -7 -8.5 0 t-8.5 0 t-8.5 0 t-8.5 0"/><path d="M372 256 q4.25 -7 8.5 0 t8.5 0 t8.5 0 t8.5 0"/>
+          </g>
+          <!-- placas, ímã e peça polar: hachurados porque estão cortados -->
+          <g stroke="#a3a8ad" stroke-width="1.2">
+            <rect x="150" y="282" width="104" height="16" fill="url(#hach-a)"/>
+            <rect x="386" y="282" width="104" height="16" fill="url(#hach-a)"/>
+            <rect x="150" y="298" width="96" height="54" fill="url(#hach-b)"/>
+            <rect x="394" y="298" width="96" height="54" fill="url(#hach-b)"/>
+            <path d="M150 352 H280 V262 H360 V352 H490 V368 H150 Z" fill="url(#hach-a)"/>
+          </g>
+          <!-- bobina: corpo + espiras do fio em corte (os mesmos pontos de cobre da marca) -->
+          <rect x="268" y="230" width="4" height="100" fill="#d9a066" opacity=".6"/>
+          <rect x="368" y="230" width="4" height="100" fill="#d9a066" opacity=".6"/>
+          <g fill="#e8a06a">
+            <circle cx="258" cy="292" r="2.6"/><circle cx="264" cy="292" r="2.6"/><circle cx="258" cy="298" r="2.6"/><circle cx="264" cy="298" r="2.6"/>
+            <circle cx="258" cy="304" r="2.6"/><circle cx="264" cy="304" r="2.6"/><circle cx="258" cy="310" r="2.6"/><circle cx="264" cy="310" r="2.6"/>
+            <circle cx="258" cy="316" r="2.6"/><circle cx="264" cy="316" r="2.6"/><circle cx="258" cy="322" r="2.6"/><circle cx="264" cy="322" r="2.6"/>
+            <circle cx="258" cy="328" r="2.6"/><circle cx="264" cy="328" r="2.6"/>
+            <circle cx="376" cy="292" r="2.6"/><circle cx="382" cy="292" r="2.6"/><circle cx="376" cy="298" r="2.6"/><circle cx="382" cy="298" r="2.6"/>
+            <circle cx="376" cy="304" r="2.6"/><circle cx="382" cy="304" r="2.6"/><circle cx="376" cy="310" r="2.6"/><circle cx="382" cy="310" r="2.6"/>
+            <circle cx="376" cy="316" r="2.6"/><circle cx="382" cy="316" r="2.6"/><circle cx="376" cy="322" r="2.6"/><circle cx="382" cy="322" r="2.6"/>
+            <circle cx="376" cy="328" r="2.6"/><circle cx="382" cy="328" r="2.6"/>
+          </g>
+          <!-- cabinho até o terminal -->
+          <path d="M266 240 C230 214 180 212 150 220" fill="none" stroke="#e8a06a" stroke-width="1.4"/>
+          <rect x="132" y="214" width="16" height="12" rx="1" fill="none" stroke="#e8a06a" stroke-width="1.4"/>
+          <!-- chamadas -->
+          <g fill="none" stroke="#a3a8ad" stroke-width="1">
+            <path d="M52 150 H205"/><path d="M52 40 L128 50"/><path d="M362 156 L342 208"/><path d="M588 256 H402"/>
+            <path d="M588 326 H472"/><path d="M300 392 V346"/><path d="M52 206 L131 218"/>
+          </g>
+          <path d="M52 310 H254" fill="none" stroke="#e8a06a" stroke-width="1.2"/>
+          <g font-family="IBM Plex Mono, monospace" font-size="11" font-weight="500" text-anchor="middle">
+            <g fill="#15171a" stroke="#a3a8ad" stroke-width="1"><circle cx="40" cy="150" r="11"/><circle cx="40" cy="40" r="11"/><circle cx="372" cy="150" r="11"/><circle cx="600" cy="256" r="11"/><circle cx="600" cy="326" r="11"/><circle cx="300" cy="404" r="11"/><circle cx="40" cy="206" r="11"/></g>
+            <circle cx="40" cy="310" r="11" fill="#e8a06a"/>
+            <g fill="#e8e3e1"><text x="40" y="154">1</text><text x="40" y="44">2</text><text x="372" y="154">3</text><text x="600" y="260">4</text><text x="600" y="330">6</text><text x="300" y="408">7</text><text x="40" y="210">8</text></g>
+            <text x="40" y="314" fill="#15171a">5</text>
+          </g>
+        </svg>
+        <figcaption class="desenho__carimbo"><span>Corte simplificado</span><span>Bobina em destaque</span><span>Sem escala</span></figcaption>
+      </figure>
+
+      <div>
+        <ol class="pecas" aria-label="Partes do alto-falante">
+          <li><b>1</b>Cone</li>
+          <li><b>2</b>Suspensão</li>
+          <li><b>3</b>Calota</li>
+          <li><b>4</b>Aranha</li>
+          <li class="is-cobre"><b>5</b>Bobina</li>
+          <li><b>6</b>Ímã</li>
+          <li><b>7</b>Peça polar</li>
+          <li><b>8</b>Cabinhos e terminal</li>
+        </ol>
+        <div class="porque">
+          <h3>Por que escolher a Nova Look Som</h3>
+          <ul>
+            <li><b>Direto da fábrica.</b> Você negocia com quem produz, sem intermediário.</li>
+            <li><b>No seu modelo.</b> Envie o projeto ou uma amostra e a bobina é produzida na medida do seu alto-falante.</li>
+            <li><b>28 anos de mercado.</b> Marcas de alto-falantes de todo o Brasil confiam no nosso trabalho.</li>
+            <li><b>Do lote pequeno ao pedido programado.</b> Atendemos a reposição da loja e a linha de produção do fabricante.</li>
+          </ul>
+        </div>
+        <div class="acoes">
+          <a class="btn btn--cobre" href="#contato">Pedir orçamento</a>
+          <a class="btn btn--linha" href="bobinas-para-alto-falantes.html">Ver todas as bobinas</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= REPAROS: fotos reais, frente e verso ======================= -->
+<section class="secao" id="reparos" aria-labelledby="reparos-titulo">
+  <div class="wrap">
+    <div class="cab">
+      <p class="rotulo">Reparos para drivers e tweeters</p>
+      <h2 class="titulo" id="reparos-titulo">Reparo feito no padrão da sua peça</h2>
+      <p class="lead">O reparo é o conjunto de reposição do driver ou do tweeter: o diafragma, a bobina e os terminais, montados no aro. Você envia o projeto ou uma peça de amostra e a gente produz no seu modelo.</p>
+    </div>
+
+    <div class="placas">
+      <article class="virar" data-virar>
+        <div class="virar__cena"><div class="virar__peca">
+          <figure class="virar__lado">
+            <img src="assets/img/fotos/reparo-titanio-frente.webp" width="1000" height="800" loading="lazy" decoding="async" alt="Reparo com diafragma em titânio visto de frente: domo com nervuras em estrela e terminais no aro plástico">
+            <span>Frente</span>
+          </figure>
+          <figure class="virar__lado virar__lado--verso" aria-hidden="true">
+            <img src="assets/img/fotos/reparo-titanio-verso.webp" width="842" height="674" loading="lazy" decoding="async" alt="Reparo com diafragma em titânio visto por trás, com a bobina de cobre em volta do domo">
+            <span>Verso</span>
+          </figure>
+        </div></div>
+        <div class="virar__rodape">
+          <div><h3>Diafragma em titânio</h3><p>Foto do produto · frente e verso</p></div>
+          <button class="virar__btn" type="button" aria-pressed="false"><svg aria-hidden="true"><use href="#ic-virar"/></svg><span>Ver verso</span></button>
+        </div>
+      </article>
+
+      <article class="virar" data-virar>
+        <div class="virar__cena"><div class="virar__peca">
+          <figure class="virar__lado">
+            <img src="assets/img/fotos/reparo-fenolico-frente.webp" width="828" height="662" loading="lazy" decoding="async" alt="Reparo com diafragma fenólico visto de frente: domo âmbar de trama aparente e terminais vermelho e preto">
+            <span>Frente</span>
+          </figure>
+          <figure class="virar__lado virar__lado--verso" aria-hidden="true">
+            <img src="assets/img/fotos/reparo-fenolico-verso.webp" width="786" height="629" loading="lazy" decoding="async" alt="Reparo com diafragma fenólico visto por trás, com o aro de alumínio e a bobina">
+            <span>Verso</span>
+          </figure>
+        </div></div>
+        <div class="virar__rodape">
+          <div><h3>Diafragma fenólico</h3><p>Foto do produto · frente e verso</p></div>
+          <button class="virar__btn" type="button" aria-pressed="false"><svg aria-hidden="true"><use href="#ic-virar"/></svg><span>Ver verso</span></button>
+        </div>
+      </article>
+
+      <article class="virar" data-virar>
+        <div class="virar__cena"><div class="virar__peca">
+          <figure class="virar__lado">
+            <img src="assets/img/fotos/reparo-poliimida-frente.webp" width="660" height="528" loading="lazy" decoding="async" alt="Reparo com diafragma em poliimida visto de frente: domo claro translúcido e terminais dourados">
+            <span>Frente</span>
+          </figure>
+          <figure class="virar__lado virar__lado--verso" aria-hidden="true">
+            <img src="assets/img/fotos/reparo-poliimida-verso.webp" width="1000" height="800" loading="lazy" decoding="async" alt="Reparo com diafragma em poliimida visto por trás, com o anel de cobre da bobina em volta do domo">
+            <span>Verso</span>
+          </figure>
+        </div></div>
+        <div class="virar__rodape">
+          <div><h3>Diafragma em poliimida</h3><p>Foto do produto · frente e verso</p></div>
+          <button class="virar__btn" type="button" aria-pressed="false"><svg aria-hidden="true"><use href="#ic-virar"/></svg><span>Ver verso</span></button>
+        </div>
       </article>
     </div>
-    <div class="materials" id="materia-prima">
-      <h3 class="materials__title">Matéria-prima de alta qualidade</h3>
-      <div class="materials__grid">
-        <div>
-          <b>Corpo da bobina</b>
-          <ul class="chips"><li>Kapton</li><li>Alumínio</li><li>Fibra</li></ul>
-        </div>
-        <div>
-          <b>Fios</b>
-          <ul class="chips"><li>Cobre</li><li>Alumínio</li><li>CCAW</li></ul>
-          <span>De acordo com o seu projeto.</span>
-        </div>
-        <div>
-          <b>Diafragma dos reparos</b>
-          <ul class="chips"><li>Fenólicos</li><li>Poliimida</li><li>Titânio</li></ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===================== A BOBINA ===================== -->
-<section id="bobina" class="section section--white">
-  <div class="wrap">
-    <header class="section__head">
-      <p class="eyebrow">Bobinas para alto-falantes</p>
-      <h2>A bobina certa para o seu alto-falante</h2>
-      <p class="section__lead">Produzimos bobinas para woofers, subwoofers e médios, no diâmetro, no material e no enrolamento do seu projeto. É a peça que define como o alto-falante toca, por isso cada uma sai da fábrica pronta para o seu modelo.</p>
-    </header>
-    <div class="split">
-      <figure class="cutaway">
-        <svg viewBox="0 0 600 430" role="img" aria-label="Corte de um alto-falante com a bobina em destaque, dentro do campo do ímã, presa ao cone e à aranha">
-          <g fill="none" stroke="#3A3F44" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-            <path d="M40 62 L110 62 L185 250"/><path d="M560 62 L490 62 L415 250"/>
-            <path d="M60 62 L170 250"/><path d="M540 62 L430 250"/>
-          </g>
-          <g fill="none" stroke="#7A7F84" stroke-width="6" stroke-linecap="round"><path d="M70 64 Q86 36 102 64"/><path d="M498 64 Q514 36 530 64"/></g>
-          <path d="M102 64 L254 212 L254 222 L96 70 Z" fill="#5A6066"/>
-          <path d="M498 64 L346 212 L346 222 L504 70 Z" fill="#5A6066"/>
-          <path d="M248 214 Q300 160 352 214 Z" fill="#7A7F84"/>
-          <g fill="none" stroke="#A9A39A" stroke-width="3"><path d="M186 244 q8 -10 16 0 t16 0 t16 0 t16 0 t4 0"/><path d="M414 244 q-8 -10 -16 0 t-16 0 t-16 0 t-16 0 t-4 0"/></g>
-          <rect x="250" y="210" width="10" height="122" fill="#E3D7C1"/><rect x="340" y="210" width="10" height="122" fill="#E3D7C1"/>
-          <rect x="245" y="284" width="20" height="48" rx="2" fill="#B8662F"/><rect x="335" y="284" width="20" height="48" rx="2" fill="#B8662F"/>
-          <g stroke="#8E4718" stroke-width="1.2"><path d="M245 290h20M245 296h20M245 302h20M245 308h20M245 314h20M245 320h20M245 326h20"/><path d="M335 290h20M335 296h20M335 302h20M335 308h20M335 314h20M335 320h20M335 326h20"/></g>
-          <rect x="150" y="262" width="92" height="20" fill="#9AA0A6"/><rect x="358" y="262" width="92" height="20" fill="#9AA0A6"/>
-          <rect x="150" y="282" width="86" height="58" fill="#2A2F34"/><rect x="364" y="282" width="86" height="58" fill="#2A2F34"/>
-          <rect x="150" y="340" width="300" height="22" fill="#9AA0A6"/>
-          <rect x="270" y="252" width="60" height="88" fill="#9AA0A6"/>
-          <path d="M255 232 C 210 200, 160 210, 132 226" fill="none" stroke="#B8662F" stroke-width="2.5"/>
-          <rect x="118" y="220" width="18" height="12" rx="2" fill="#C9A227"/>
-          <circle cx="300" cy="308" r="78" fill="none" stroke="#B8662F" stroke-width="2" stroke-dasharray="6 6" opacity="0.7"/>
-          <g font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">
-            <circle cx="150" cy="140" r="15" fill="#16191C"/><text x="150" y="145" fill="#F4F2ED">1</text>
-            <circle cx="86" cy="26" r="15" fill="#16191C"/><text x="86" y="31" fill="#F4F2ED">2</text>
-            <circle cx="300" cy="150" r="15" fill="#16191C"/><text x="300" y="155" fill="#F4F2ED">3</text>
-            <circle cx="440" cy="222" r="15" fill="#16191C"/><text x="440" y="227" fill="#F4F2ED">4</text>
-            <circle cx="300" cy="402" r="18" fill="#B8662F"/><text x="300" y="408" fill="#FFFFFF" font-size="17">5</text>
-            <circle cx="193" cy="312" r="15" fill="#F4F2ED"/><text x="193" y="317" fill="#16191C">6</text>
-            <circle cx="300" cy="296" r="15" fill="#16191C"/><text x="300" y="301" fill="#F4F2ED">7</text>
-            <circle cx="100" cy="250" r="15" fill="#16191C"/><text x="100" y="255" fill="#F4F2ED">8</text>
-          </g>
-          <path d="M300 384 L300 336" stroke="#B8662F" stroke-width="2"/>
-        </svg>
-        <figcaption>Corte simplificado de um alto-falante. Em destaque, a bobina.</figcaption>
-      </figure>
-      <div class="split__text">
-        <ol class="parts">
-          <li><b>1</b> Cone</li>
-          <li><b>2</b> Suspensão</li>
-          <li><b>3</b> Calota</li>
-          <li><b>4</b> Aranha</li>
-          <li class="parts__hl"><b>5</b> Bobina</li>
-          <li><b>6</b> Ímã</li>
-          <li><b>7</b> Peça polar</li>
-          <li><b>8</b> Cabinhos e terminal</li>
+    <div class="reparo-extra">
+      <figure class="reparo-anotado">
+        <div class="anotada" data-anotada>
+          <img src="assets/img/fotos/reparo-titanio-verso-anotado.webp" width="1051" height="788" loading="lazy" decoding="async"
+               alt="Reparo para driver visto por trás: aro de alumínio, diafragma em titânio com nervuras em estrela, a bobina de cobre em volta do diafragma e os terminais nas laterais">
+          <!-- Chamadas: coordenadas em % da foto (largura 100, altura 75) -->
+          <svg class="anotada__linhas" viewBox="0 0 100 75" aria-hidden="true">
+            <g style="--d:.25s"><path class="lider" pathLength="1" d="M74 37.5 L78 40.5 L81.5 40.5"/><circle class="alvo" cx="74" cy="37.5" r="1.15"/><circle class="alvo-ponto" cx="74" cy="37.5" r=".35"/></g>
+            <g style="--d:.45s"><path class="lider" pathLength="1" d="M51.5 38.6 L56 5.25 L59.5 5.25"/><circle class="alvo" cx="51.5" cy="38.6" r="1.15"/><circle class="alvo-ponto" cx="51.5" cy="38.6" r=".35"/></g>
+            <g class="is-cobre" style="--d:.65s"><path class="lider" pathLength="1" d="M46 22.65 L40 5.25 L27 5.25"/><circle class="alvo" cx="46" cy="22.65" r="1.15"/><circle class="alvo-ponto" cx="46" cy="22.65" r=".35"/></g>
+            <g style="--d:.85s"><path class="lider" pathLength="1" d="M29.5 45.75 L27 66 L24.5 66"/><circle class="alvo" cx="29.5" cy="45.75" r="1.15"/><circle class="alvo-ponto" cx="29.5" cy="45.75" r=".35"/></g>
+          </svg>
+          <p class="chamada" style="left:82.5%;top:54%;--d:.25s" aria-hidden="true"><b>01</b><span>Aro</span><small>No encaixe da sua peça</small></p>
+          <p class="chamada" style="left:60.5%;top:7%;--d:.45s" aria-hidden="true"><b>02</b><span>Diafragma</span><small>Titânio, nesta peça</small></p>
+          <p class="chamada chamada--esq is-cobre" style="right:74%;top:7%;--d:.65s" aria-hidden="true"><b>03</b><span>Bobina</span><small>Feita na nossa fábrica</small></p>
+          <p class="chamada chamada--esq" style="right:76.5%;top:88%;--d:.85s" aria-hidden="true"><b>04</b><span>Terminais</span><small>Montados no aro</small></p>
+          <span class="marcador" style="left:74%;top:50%" aria-hidden="true">1</span>
+          <span class="marcador" style="left:51.5%;top:51.5%" aria-hidden="true">2</span>
+          <span class="marcador is-cobre" style="left:46%;top:30.2%" aria-hidden="true">3</span>
+          <span class="marcador" style="left:29.5%;top:61%" aria-hidden="true">4</span>
+        </div>
+        <ol class="legenda-pecas" aria-label="Partes do reparo">
+          <li><b>1</b>Aro</li>
+          <li><b>2</b>Diafragma em titânio</li>
+          <li class="is-cobre"><b>3</b>Bobina da casa</li>
+          <li><b>4</b>Terminais</li>
         </ol>
-        <h3 class="h-sub">Por que escolher a Nova Look Som</h3>
-        <ul class="checks">
-          <li><b>Direto da fábrica.</b> Você negocia com quem produz, sem intermediário.</li>
-          <li><b>No seu modelo.</b> Envie o projeto ou uma amostra e a bobina é produzida na medida do seu alto-falante.</li>
-          <li><b>28 anos de mercado.</b> Marcas de alto-falantes de todo o Brasil confiam no nosso trabalho.</li>
-          <li><b>Do lote pequeno ao pedido programado.</b> Atendemos a reposição da loja e a linha de produção do fabricante.</li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn--dark" href="#contato">Pedir orçamento</a>
-          <a class="link-arrow link-arrow--dark link-arrow--inline" href="bobinas-para-alto-falantes.html">Ver todas as bobinas</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== REPAROS ===================== -->
-<section id="reparos" class="section">
-  <div class="wrap">
-    <header class="section__head">
-      <p class="eyebrow">Reparos para drivers e tweeters</p>
-      <h2>Reparo feito no padrão da sua peça</h2>
-      <p class="section__lead">O reparo é o conjunto de reposição do driver ou do tweeter: o diafragma, a bobina e os terminais, montados no aro. Trabalhamos igual às bobinas: você envia o projeto ou uma peça de amostra e a gente produz no seu modelo.</p>
-    </header>
-    <div class="split">
-      <div class="split__text">
-        <ol class="parts">
-          <li><b>1</b> Aro</li>
-          <li><b>2</b> Diafragma</li>
-          <li class="parts__hl"><b>3</b> Bobina</li>
-          <li><b>4</b> Terminais</li>
-        </ol>
-        <h3 class="h-sub">Por que escolher nossos reparos</h3>
-        <ul class="checks">
-          <li><b>Diafragmas fenólicos, poliimida e titânio.</b> O material que o seu driver ou tweeter pede.</li>
-          <li><b>Bobina própria.</b> Feita na nossa fábrica, com o mesmo padrão das nossas bobinas para alto-falantes.</li>
-          <li><b>Sob medida.</b> Diâmetro, impedância, furação e terminais seguem o projeto ou a amostra.</li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn--dark" href="#contato">Orçar reparo</a>
-          <a class="link-arrow link-arrow--dark link-arrow--inline" href="reparos-para-drivers-e-tweeters.html">Ver todos os reparos</a>
-        </div>
-      </div>
-      <figure class="cutaway">
-        <svg viewBox="0 0 600 430" role="img" aria-label="Reparo de driver em vista explodida: aro com terminais, diafragma em poliimida ou titânio e a bobina que vai embaixo">
-          <defs>
-            <linearGradient id="kap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E0A55A"/><stop offset="1" stop-color="#7A4215"/></linearGradient>
-            <linearGradient id="tit" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1F2F3"/><stop offset="1" stop-color="#8C9196"/></linearGradient>
-            <linearGradient id="cu2" x1="0" x2="1"><stop offset="0" stop-color="#8E4718"/><stop offset="0.45" stop-color="#E9A877"/><stop offset="1" stop-color="#8E4718"/></linearGradient>
-            <clipPath id="esq"><rect x="0" y="0" width="300" height="430"/></clipPath>
-            <clipPath id="dir"><rect x="300" y="0" width="300" height="430"/></clipPath>
-          </defs>
-          <!-- guias de montagem -->
-          <g stroke="#B8662F" stroke-width="2" stroke-dasharray="6 6" opacity="0.6"><path d="M190 196 V300"/><path d="M410 196 V300"/></g>
-          <!-- bobina (embaixo) -->
-          <rect x="190" y="300" width="220" height="16" fill="#D9C7A0"/>
-          <rect x="190" y="316" width="220" height="42" fill="url(#cu2)"/>
-          <g stroke="#7A3A12" stroke-width="1.2" opacity="0.7"><path d="M190 324h220M190 332h220M190 340h220M190 348h220"/></g>
-          <ellipse cx="300" cy="358" rx="110" ry="26" fill="#9C5222"/>
-          <ellipse cx="300" cy="300" rx="110" ry="26" fill="#E8DCC4" stroke="#C9B48A" stroke-width="2"/>
-          <ellipse cx="300" cy="300" rx="96" ry="20" fill="#2A2F34"/>
-          <!-- cabinhos ate os terminais -->
-          <path d="M196 318 C150 300, 110 250, 104 196" fill="none" stroke="#B8662F" stroke-width="2.5"/>
-          <path d="M404 318 C450 300, 490 250, 496 196" fill="none" stroke="#B8662F" stroke-width="2.5"/>
-          <!-- aro com orelhas -->
-          <rect x="62" y="150" width="96" height="48" rx="16" fill="#2A2F34"/>
-          <rect x="442" y="150" width="96" height="48" rx="16" fill="#2A2F34"/>
-          <ellipse cx="300" cy="174" rx="190" ry="96" fill="#2A2F34"/>
-          <ellipse cx="300" cy="174" rx="146" ry="74" fill="#3A3F44"/>
-          <ellipse cx="300" cy="174" rx="134" ry="68" fill="none" stroke="#7A7F84" stroke-width="3" stroke-dasharray="2 6"/>
-          <!-- terminais -->
-          <rect x="88" y="148" width="22" height="28" rx="4" fill="#C0392B"/><ellipse cx="99" cy="148" rx="11" ry="5" fill="#E05A4A"/>
-          <rect x="490" y="148" width="22" height="28" rx="4" fill="#C9A227"/><ellipse cx="501" cy="148" rx="11" ry="5" fill="#E8C75A"/>
-          <!-- diafragma: metade poliimida, metade titanio -->
-          <g clip-path="url(#esq)"><path d="M182 174 C182 96, 418 96, 418 174 A118 58 0 0 1 182 174 Z" fill="url(#kap)"/></g>
-          <g clip-path="url(#dir)"><path d="M182 174 C182 96, 418 96, 418 174 A118 58 0 0 1 182 174 Z" fill="url(#tit)"/></g>
-          <path d="M300 116 V232" stroke="#16191C" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.5"/>
-          <g font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" text-anchor="middle">
-            <text x="248" y="186" fill="#FFF4E6">Poliimida</text>
-            <text x="354" y="186" fill="#2A2F34">Titânio</text>
-          </g>
-          <g font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" text-anchor="middle">
-            <circle cx="300" cy="62" r="15" fill="#16191C"/><text x="300" y="67" fill="#F4F2ED">2</text>
-            <circle cx="548" cy="262" r="15" fill="#16191C"/><text x="548" y="267" fill="#F4F2ED">1</text>
-            <circle cx="60" cy="110" r="15" fill="#16191C"/><text x="60" y="115" fill="#F4F2ED">4</text>
-            <circle cx="300" cy="408" r="18" fill="#B8662F"/><text x="300" y="414" fill="#FFFFFF" font-size="17">3</text>
-          </g>
-          <path d="M300 78 V112" stroke="#16191C" stroke-width="2"/>
-          <path d="M534 254 L466 222" stroke="#16191C" stroke-width="2"/>
-          <path d="M66 126 L90 146" stroke="#16191C" stroke-width="2"/>
-        </svg>
-        <figcaption>Reparo em vista explodida. O diafragma pode ser fenólico, poliimida ou titânio. Em destaque, a bobina.</figcaption>
+        <figcaption class="foto-leg"><span>Foto do produto · reparo para driver, visto por trás</span><span>Diafragma em titânio</span></figcaption>
       </figure>
+      <div>
+        <div class="porque">
+          <h3>Por que escolher nossos reparos</h3>
+          <ul>
+            <li><b>Diafragmas fenólicos, poliimida e titânio.</b> O material que o seu driver ou tweeter pede.</li>
+            <li><b>Bobina própria.</b> Feita na nossa fábrica, com o mesmo padrão das nossas bobinas para alto-falantes.</li>
+            <li><b>Sob medida.</b> Diâmetro, impedância, furação e terminais seguem o projeto ou a amostra.</li>
+            <li><b>Direto da fábrica.</b> Você negocia com quem produz, em lotes pequenos ou programados.</li>
+          </ul>
+        </div>
+        <ul class="aplicacoes" aria-label="Aplicações">
+          <li>Driver de compressão</li><li>Corneta</li><li>Tweeter</li><li>Super tweeter</li>
+        </ul>
+        <div class="acoes">
+          <a class="btn btn--cobre" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20reparos%20para%20drivers%20e%20tweeters." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-zap"/></svg>Orçar reparo</a>
+          <a class="btn btn--linha" href="reparos-para-drivers-e-tweeters.html">Ver todos os reparos</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== SOB MEDIDA ===================== -->
-<section id="sob-medida" class="section section--white">
-  <div class="wrap split split--top">
-    <div class="split__text">
-      <p class="eyebrow">Sob medida</p>
-      <h2>Bobinas sob medida: mande a especificação</h2>
-      <p class="section__lead">Cada bobina é feita para o alto-falante do cliente. Para orçar, precisamos destas informações. Se preferir, mande uma foto da bobina que você precisa.</p>
-      <a class="btn btn--dark" href="#contato">Enviar especificação</a>
+<!-- ======================= SOB MEDIDA: ficha de especificação ======================= -->
+<section class="secao secao--papel" id="sob-medida" aria-labelledby="sob-titulo">
+  <div class="wrap sob">
+    <div>
+      <p class="rotulo">Sob medida</p>
+      <h2 class="titulo" id="sob-titulo">Bobinas sob medida: mande a especificação</h2>
+      <p class="lead">Cada bobina é feita para o alto-falante do cliente. Para orçar, precisamos destas informações. Se preferir, mande uma foto da bobina que você precisa.</p>
+      <a class="btn btn--grafite" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20enviar%20a%20especifica%C3%A7%C3%A3o%20de%20uma%20bobina." target="_blank" rel="noopener">Enviar especificação</a>
     </div>
-    <div class="specs">
-      <div><b>Diâmetro do corpo</b><span>Ex.: 51,20 mm</span></div>
-      <div><b>Material do corpo</b><span>Kapton, alumínio ou fibra</span></div>
-      <div><b>Fio</b><span>Cobre, alumínio ou CCAW, e bitola do seu projeto</span></div>
-      <div><b>Enrolamento</b><span>Bobina simples ou dupla, altura, camadas e impedância</span></div>
-      <div><b>Cabinhos</b><span>Comprimento dos terminais</span></div>
-      <div><b>Quantidade</b><span>Lote único ou pedido programado</span></div>
+    <div class="ficha">
+      <p class="ficha__topo"><span>Ficha de especificação · bobina</span><span>Preencha no WhatsApp</span></p>
+      <div class="ficha__corpo">
+        <dl>
+          <div><dt>Diâmetro do corpo</dt><dd>Ex.: 51,20 mm</dd></div>
+          <div><dt>Material do corpo</dt><dd>Kapton, alumínio ou fibra</dd></div>
+          <div><dt>Fio</dt><dd>Cobre, alumínio ou CCAW, e bitola do seu projeto</dd></div>
+          <div><dt>Enrolamento</dt><dd>Bobina simples ou dupla, altura, camadas e impedância</dd></div>
+          <div><dt>Cabinhos</dt><dd>Comprimento dos terminais</dd></div>
+          <div><dt>Quantidade</dt><dd>Lote único ou pedido programado</dd></div>
+        </dl>
+        <div class="ficha__desenho">
+          <svg viewBox="0 0 300 320" role="img" aria-label="Desenho de uma bobina com as medidas que você envia: diâmetro, altura, enrolamento e cabinhos">
+            <defs><pattern id="espiras" width="6" height="3" patternUnits="userSpaceOnUse"><rect width="6" height="3" fill="#e9c3a4"/><rect y="2" width="6" height="1" fill="#c26a2e"/></pattern></defs>
+            <rect x="80" y="196" width="140" height="58" fill="url(#espiras)"/>
+            <g fill="none" stroke="#15171a" stroke-width="1.3">
+              <path d="M80 92 V262 A70 12 0 0 0 220 262 V92"/>
+              <ellipse cx="150" cy="92" rx="70" ry="12"/>
+              <ellipse cx="150" cy="92" rx="63" ry="8.5" opacity=".45"/>
+            </g>
+            <g fill="none" stroke="#c26a2e" stroke-width="1.6" stroke-linecap="round">
+              <path d="M118 90 C112 62 104 44 96 24"/><path d="M134 89 C136 62 142 44 150 24"/>
+            </g>
+            <g fill="none" stroke="#4a4e54" stroke-width="1">
+              <path d="M80 270 V300 M220 270 V300 M80 292 H220 M76 296 L84 288 M216 296 L224 288"/>
+              <path d="M226 92 H262 M226 262 H262 M254 92 V262 M250 96 L258 88 M250 266 L258 258"/>
+              <path d="M74 196 H40 M74 254 H40 M48 196 V254 M44 200 L52 192 M44 258 L52 250"/>
+              <path d="M152 30 L176 20 H200"/>
+            </g>
+            <g font-family="IBM Plex Mono, monospace" font-size="9.5" letter-spacing=".8" fill="#4a4e54">
+              <text x="150" y="314" text-anchor="middle">Ø DO SEU PROJETO</text>
+              <text transform="translate(275 177) rotate(90)" text-anchor="middle">ALTURA</text>
+              <text transform="translate(31 225) rotate(-90)" text-anchor="middle">ENROLAMENTO</text>
+              <text x="204" y="23">CABINHOS</text>
+            </g>
+          </svg>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== COMO PEDIR ===================== -->
-<section id="como-pedir" class="section">
+<!-- ======================= COMO PEDIR ======================= -->
+<section class="secao secao--grafite" id="como-pedir" aria-labelledby="pedir-titulo">
   <div class="wrap">
-    <header class="section__head">
-      <p class="eyebrow">Como pedir</p>
-      <h2>Do primeiro contato à entrega, sem complicação</h2>
-      <p class="section__lead">Você não precisa ter a ficha técnica completa. A gente ajuda a chegar na peça certa.</p>
-    </header>
-    <ol class="steps">
-      <li><span class="steps__n">01</span><b>Envie o que você tem</b><span>Projeto, ficha técnica, uma amostra ou só uma foto da peça.</span></li>
-      <li><span class="steps__n">02</span><b>Receba o orçamento</b><span>Respondemos pelo WhatsApp ou por e-mail, sem compromisso.</span></li>
-      <li><span class="steps__n">03</span><b>Produzimos no seu modelo</b><span>Bobinas e reparos sob medida, com matéria-prima de alta qualidade.</span></li>
-      <li class="steps__hl"><span class="steps__n">04</span><b>Enviamos para você</b><span>Para todo o Brasil e países da América Latina.</span></li>
+    <div class="cab">
+      <p class="rotulo">Como pedir</p>
+      <h2 class="titulo" id="pedir-titulo">Do primeiro contato à entrega, sem complicação</h2>
+      <p class="lead">Você não precisa ter a ficha técnica completa. A gente ajuda a chegar na peça certa.</p>
+    </div>
+    <ol class="passos">
+      <li><b>01</b><h3>Envie o que você tem</h3><p>Projeto, ficha técnica, uma amostra ou só uma foto da peça.</p></li>
+      <li><b>02</b><h3>Receba o orçamento</h3><p>Respondemos pelo WhatsApp ou por e-mail, sem compromisso.</p></li>
+      <li><b>03</b><h3>Produzimos no seu modelo</h3><p>Bobinas e reparos sob medida, com matéria-prima de alta qualidade.</p></li>
+      <li><b>04</b><h3>Enviamos para você</h3><p>Para todo o Brasil e países da América Latina.</p></li>
     </ol>
-    <div class="steps__cta">
-      <a class="btn btn--copper btn--lg" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">Pedir orçamento no WhatsApp</a>
+    <div class="acoes">
+      <a class="btn btn--cobre" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-zap"/></svg>Pedir orçamento no WhatsApp</a>
     </div>
   </div>
 </section>
 
-<!-- ===================== CLIENTES ===================== -->
-<section class="clients" aria-labelledby="clientes-titulo">
+<!-- ======================= CLIENTES ======================= -->
+<!-- Logos só ficam com autorização dos clientes (pendência no AGENTS.md) -->
+<section class="clientes" aria-labelledby="clientes-titulo">
   <div class="wrap">
-    <h2 id="clientes-titulo" class="clients__title">Marcas que confiam na Nova Look Som</h2>
-    <p class="clients__lead">28 anos atendendo com excelência e buscando satisfazer cada vez mais nossos clientes e parceiros.</p>
-    <ul class="clients__grid">
-      <li><img src="assets/img/clientes/evok-audio.png" alt="Evok Audio" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/vs-alto-falantes.png" alt="VS Alto Falantes" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/hard-power.png" alt="Hard Power Alto Falantes" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/jp-audio.png" alt="JP Audio" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/spyder-audio-system.png" alt="Spyder Audio System" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/qvs-audio.png" alt="QVS Áudio Eletrônicos" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/magnum-extreme-sound.png" alt="Magnum Extreme Sound" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/unlike-speakers.png" alt="Unlike Speakers" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/etm-alto-falantes.png" alt="ETM Alto Falantes" width="200" height="80" loading="lazy"></li>
-      <li><img src="assets/img/clientes/permak.png" alt="Permak Acessórios Automotivos" width="200" height="80" loading="lazy"></li>
-    </ul>
+    <div class="cab">
+      <p class="rotulo">Clientes</p>
+      <h2 class="titulo" id="clientes-titulo">Marcas que confiam na Nova Look Som</h2>
+      <p class="lead">28 anos atendendo com excelência e buscando satisfazer cada vez mais nossos clientes e parceiros.</p>
+    </div>
+  </div>
+  <!-- Faixa de logos que passa sem parar (pausa com o mouse em cima).
+       A primeira lista é a que leitores de tela leem; a segunda é uma cópia (aria-hidden) que fecha o laço da animação.
+       Para incluir ou tirar um cliente, mude as DUAS listas, na mesma posição. -->
+  <div class="logos-faixa">
+    <div class="logos-faixa__trilho">
+      <ul class="logos-faixa__lista">
+        <li><img src="assets/img/clientes/evok-audio.webp" alt="Evok Audio" width="356" height="114" style="--f:1.032" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/vs-alto-falantes.webp" alt="VS Alto Falantes" width="189" height="113" style="--f:1.408" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/hard-power.webp" alt="Hard Power Alto Falantes" width="217" height="114" style="--f:1.426" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/jp-audio.webp" alt="JP Audio" width="224" height="101" style="--f:1.145" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/spyder-audio-system.webp" alt="Spyder Audio System" width="356" height="97" style="--f:0.893" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/qvs-audio.webp" alt="QVS Áudio Eletrônicos" width="292" height="96" style="--f:0.974" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/magnum-extreme-sound.webp" alt="Magnum Extreme Sound" width="356" height="67" style="--f:0.735" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/unlike-speakers.webp" alt="Unlike Speakers" width="356" height="103" style="--f:0.949" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/etm-alto-falantes.webp" alt="ETM Alto Falantes" width="282" height="114" style="--f:1.062" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/permak.webp" alt="Permak Acessórios Automotivos" width="356" height="94" style="--f:0.938" loading="lazy" decoding="async"></li>
+      </ul>
+      <ul class="logos-faixa__lista" aria-hidden="true">
+        <li><img src="assets/img/clientes/evok-audio.webp" alt="" width="356" height="114" style="--f:1.032" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/vs-alto-falantes.webp" alt="" width="189" height="113" style="--f:1.408" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/hard-power.webp" alt="" width="217" height="114" style="--f:1.426" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/jp-audio.webp" alt="" width="224" height="101" style="--f:1.145" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/spyder-audio-system.webp" alt="" width="356" height="97" style="--f:0.893" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/qvs-audio.webp" alt="" width="292" height="96" style="--f:0.974" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/magnum-extreme-sound.webp" alt="" width="356" height="67" style="--f:0.735" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/unlike-speakers.webp" alt="" width="356" height="103" style="--f:0.949" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/etm-alto-falantes.webp" alt="" width="282" height="114" style="--f:1.062" loading="lazy" decoding="async"></li>
+        <li><img src="assets/img/clientes/permak.webp" alt="" width="356" height="94" style="--f:0.938" loading="lazy" decoding="async"></li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- ===================== PARA QUEM ===================== -->
-<section class="section section--dark" aria-label="Para quem">
-  <div class="wrap cards cards--2">
-    <div class="card card--line">
-      <p class="eyebrow eyebrow--light">Para fabricantes</p>
-      <h3>Seu projeto, no volume que a linha precisa</h3>
-      <p>Bobinas na sua especificação, com pedidos programados e prazo combinado.</p>
+<!-- ======================= PARA QUEM ======================= -->
+<section class="secao" aria-labelledby="publico-titulo">
+  <div class="wrap">
+    <div class="cab">
+      <p class="rotulo">Para quem</p>
+      <h2 class="titulo" id="publico-titulo">Para fabricantes de <span class="nq">alto-falantes</span> e lojas de som</h2>
     </div>
-    <div class="card card--line">
-      <p class="eyebrow eyebrow--light">Para lojas</p>
-      <h3>Reposição sem complicação</h3>
-      <p>Bobinas, reparos de drivers e tweeters e drivers, em lotes pequenos, para reposição e revenda.</p>
+    <div class="publicos">
+      <article>
+        <p class="rotulo">Para fabricantes</p>
+        <h3>Seu projeto, no volume que a linha precisa</h3>
+        <p>Bobinas na sua especificação, com pedidos programados e prazo combinado.</p>
+      </article>
+      <article>
+        <p class="rotulo">Para lojas</p>
+        <h3>Reposição sem complicação</h3>
+        <p>Bobinas, reparos de drivers e tweeters e drivers, em lotes pequenos, para reposição e revenda.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ===================== PERGUNTAS ===================== -->
-<section id="perguntas" class="section">
+<!-- ======================= DÚVIDAS ======================= -->
+<section class="secao secao--papel" id="perguntas" aria-labelledby="faq-titulo">
   <div class="wrap faq">
-    <header class="section__head faq__head">
-      <p class="eyebrow">Dúvidas frequentes</p>
-      <h2>Perguntas que a gente sempre recebe</h2>
-      <p class="section__lead">Não encontrou a sua dúvida? Fale direto com a fábrica.</p>
-      <a class="btn btn--dark" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a>
-    </header>
-    <div class="faq__list">
-      <details>
-        <summary>Vocês entregam fora de São Paulo?</summary>
-        <p>Sim. Atendemos clientes em todos os estados do Brasil e em alguns países da América Latina.</p>
-      </details>
-      <details>
-        <summary>Vocês fazem bobina sob medida?</summary>
-        <p>Sim, é o nosso trabalho principal. Envie o diâmetro, o material do corpo, o fio e a bitola, os dados do enrolamento e a quantidade. Se não tiver tudo, mande uma foto da bobina e a gente ajuda.</p>
-      </details>
-      <details>
-        <summary>Vocês fazem reparo sob medida para driver e tweeter?</summary>
-        <p>Sim. Fazemos reparos com diafragma fenólico, poliimida ou titânio, no modelo da sua peça. Envie o projeto ou uma amostra, a impedância e a quantidade.</p>
-      </details>
-      <details>
-        <summary>Não tenho a ficha técnica. Vocês conseguem fazer?</summary>
-        <p>Sim. Envie uma amostra ou uma foto da peça e a gente ajuda a chegar no modelo certo.</p>
-      </details>
-      <details>
-        <summary>Vocês atendem pedidos pequenos?</summary>
-        <p>Sim. Atendemos desde lotes pequenos, para a reposição de lojas, até pedidos programados para fabricantes.</p>
-      </details>
-      <details>
-        <summary>Vocês vendem drivers?</summary>
-        <p>Sim. Fale com a gente para consultar os modelos disponíveis.</p>
-      </details>
-      <details>
-        <summary>Vocês vendem para consumidor final?</summary>
-        <p>Não. A Nova Look Som vende para empresas: fabricantes de alto-falantes e lojas. Se você precisa consertar o seu som, procure uma loja de som da sua região.</p>
-      </details>
-      <details>
-        <summary>Como faço um pedido de orçamento?</summary>
-        <p>Pelo WhatsApp (11) 97719-4026, pelo e-mail atendimento@novalooksom.com.br ou pelo formulário abaixo.</p>
-      </details>
+    <div class="faq__cab">
+      <p class="rotulo">Dúvidas frequentes</p>
+      <h2 class="titulo" id="faq-titulo">Perguntas que a gente sempre recebe</h2>
+      <p class="lead">Não encontrou a sua dúvida? Fale direto com a fábrica.</p>
+      <a class="btn btn--grafite" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20tenho%20uma%20d%C3%BAvida." target="_blank" rel="noopener">Tirar dúvida no WhatsApp</a>
+    </div>
+    <div>
+      <details><summary>Vocês entregam fora de São Paulo?</summary><p>Sim. Atendemos clientes em todos os estados do Brasil e em alguns países da América Latina.</p></details>
+      <details><summary>Vocês fazem bobina sob medida?</summary><p>Sim, é o nosso trabalho principal. Envie o diâmetro, o material do corpo, o fio e a bitola, os dados do enrolamento e a quantidade. Se não tiver tudo, mande uma foto da bobina e a gente ajuda.</p></details>
+      <details><summary>Vocês fazem reparo sob medida para driver e tweeter?</summary><p>Sim. Fazemos reparos com diafragma fenólico, poliimida ou titânio, no modelo da sua peça. Envie o projeto ou uma amostra, a impedância e a quantidade.</p></details>
+      <details><summary>Não tenho a ficha técnica. Vocês conseguem fazer?</summary><p>Sim. Envie uma amostra ou uma foto da peça e a gente ajuda a chegar no modelo certo.</p></details>
+      <details><summary>Vocês atendem pedidos pequenos?</summary><p>Sim. Atendemos desde lotes pequenos, para a reposição de lojas, até pedidos programados para fabricantes.</p></details>
+      <details><summary>Vocês vendem drivers?</summary><p>Sim. Fale com a gente para consultar os modelos disponíveis.</p></details>
+      <details><summary>Vocês vendem para consumidor final?</summary><p>Não. A Nova Look Som vende para empresas: fabricantes de alto-falantes e lojas. Se você precisa consertar o seu som, procure uma loja de som da sua região.</p></details>
+      <details><summary>Como faço um pedido de orçamento?</summary><p>Pelo WhatsApp (11) 97719-4026, pelo e-mail atendimento@novalooksom.com.br ou pelo formulário abaixo.</p></details>
     </div>
   </div>
 </section>
 
-<!-- ===================== CONTATO ===================== -->
-<section id="contato" class="section section--white">
-  <div class="wrap split split--top">
-    <div class="split__text">
-      <p class="eyebrow">Contato</p>
-      <h2>Peça seu orçamento</h2>
-      <p class="section__lead">Mande a especificação, uma amostra ou uma foto da peça que você precisa. Respondemos com o orçamento, sem compromisso.</p>
-      <ul class="contact">
+<!-- ======================= CONTATO ======================= -->
+<section class="secao" id="contato" aria-labelledby="contato-titulo">
+  <div class="wrap contato">
+    <div>
+      <p class="rotulo">Contato</p>
+      <h2 class="titulo" id="contato-titulo">Peça seu orçamento</h2>
+      <p class="lead">Mande a especificação, uma amostra ou uma foto da peça que você precisa. Respondemos com o orçamento, sem compromisso.</p>
+      <ul class="contatos">
         <li><b>WhatsApp</b><a href="https://wa.me/5511977194026" target="_blank" rel="noopener">(11) 97719-4026</a></li>
         <li><b>E-mail</b><a href="mailto:atendimento@novalooksom.com.br">atendimento@novalooksom.com.br</a></li>
         <li><b>Endereço</b><a href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Jos%C3%A9+Milani%2C+120+-+Jardim+Irapu%C3%A3%2C+Tabo%C3%A3o+da+Serra+-+SP" target="_blank" rel="noopener">Rua José Milani, 120 · Jardim Irapuã<br>Taboão da Serra · SP</a></li>
       </ul>
     </div>
-    <form id="orcamento" class="form" novalidate>
-      <div class="form__grid">
-        <label>Nome<input id="f-nome" name="nome" type="text" autocomplete="name" required></label>
-        <label>Empresa<input id="f-empresa" name="empresa" type="text" autocomplete="organization"></label>
-        <label>Você é
-          <select id="f-tipo" name="tipo">
-            <option>Fabricante</option><option>Loja</option><option>Outro</option>
-          </select>
+    <!-- O formulário não envia nem salva dados: monta o texto e abre o WhatsApp -->
+    <form class="form" id="orcamento" novalidate>
+      <p class="form__topo"><span>Pedido de orçamento</span><span>Abre no WhatsApp</span></p>
+      <div class="form__corpo">
+        <div class="form__grid">
+          <label>Nome<input id="f-nome" name="nome" type="text" autocomplete="name" required></label>
+          <label>Empresa<input id="f-empresa" name="empresa" type="text" autocomplete="organization"></label>
+          <label>Você é
+            <select id="f-tipo" name="tipo"><option>Fabricante</option><option>Loja</option><option>Outro</option></select>
+          </label>
+          <label>Interesse
+            <select id="f-interesse" name="interesse"><option>Bobinas</option><option>Reparos para drivers</option><option>Reparos para tweeters</option><option>Drivers</option></select>
+          </label>
+          <label>Quantidade aproximada<input id="f-qtd" name="quantidade" type="text" placeholder="Ex.: 200 peças"></label>
+          <label>CNPJ (opcional)<input id="f-cnpj" name="cnpj" type="text" inputmode="numeric"></label>
+        </div>
+        <label>O que você precisa
+          <textarea id="f-msg" name="mensagem" rows="4" placeholder="Ex.: 500 bobinas 51,20 mm, corpo alumínio, 8 ohms" required></textarea>
         </label>
-        <label>Interesse
-          <select id="f-interesse" name="interesse">
-            <option>Bobinas</option><option>Reparos para drivers</option><option>Reparos para tweeters</option><option>Drivers</option>
-          </select>
-        </label>
-        <label>Quantidade aproximada<input id="f-qtd" name="quantidade" type="text" placeholder="Ex.: 200 peças"></label>
-        <label>CNPJ (opcional)<input id="f-cnpj" name="cnpj" type="text" inputmode="numeric"></label>
+        <p class="form__erro" id="f-erro" role="alert" hidden>Preencha seu nome e o que você precisa.</p>
+        <!-- Link real (e não window.open): funciona com bloqueador de pop-up e dentro de visualizadores -->
+        <a class="btn btn--cobre" id="f-send" href="https://wa.me/5511977194026" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-zap"/></svg>Enviar pelo WhatsApp</a>
+        <p class="form__nota">Ao enviar, abrimos o WhatsApp com a sua mensagem pronta. Nenhum dado fica salvo neste site.</p>
       </div>
-      <label>O que você precisa
-        <textarea id="f-msg" name="mensagem" rows="4" placeholder="Ex.: 500 bobinas 51,20 mm, corpo alumínio, 8 ohms" required></textarea>
-      </label>
-      <p class="form__err" id="f-err" role="alert" hidden>Preencha seu nome e o que você precisa.</p>
-      <button type="submit" class="btn btn--copper btn--lg">Enviar pelo WhatsApp</button>
-      <p class="form__note">Ao enviar, abrimos o WhatsApp com a sua mensagem pronta. Nenhum dado fica salvo neste site.</p>
     </form>
   </div>
 </section>
 
 </main>
 
-<footer class="footer">
-  <div class="wrap footer__in">
-    <span class="footer__brand">NOVA LOOK SOM</span>
-    <nav class="footer__nav" aria-label="Páginas do site">
+<footer class="rodape">
+  <div class="wrap">
+    <a class="marca" href="#topo" aria-label="Nova Look Som, voltar ao início">
+      <svg aria-hidden="true"><use href="#marca"/></svg>
+      <span><span class="marca__nome">Nova Look Som</span><span class="marca__desc">Bobinas · Reparos · Drivers</span></span>
+    </a>
+    <nav aria-label="Páginas do site">
       <a href="bobinas-para-alto-falantes.html">Bobinas para alto-falantes</a>
       <a href="reparos-para-drivers-e-tweeters.html">Reparos para drivers e tweeters</a>
       <a href="#contato">Contato</a>
     </nav>
-    <span>Venda para empresas · Taboão da Serra, SP · © <span id="ano">2026</span> Nova Look Som</span>
+    <p class="rodape__info">Venda para empresas · Taboão da Serra, SP<br>© <span id="ano">2026</span> Nova Look Som</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.7-5.2A8.5 8.5 0 1 1 21 12z"/><path d="M9 10.5c.5 2 2 3.5 4 4l1.2-1.1 2 1-.4 1.6c-3.7.2-7.5-3.5-7.3-7.3l1.6-.4 1 2z"/></svg>
-  <span>WhatsApp</span>
-</a>
+<a class="zap" href="https://wa.me/5511977194026?text=Ol%C3%A1%2C%20vim%20pelo%20site." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg aria-hidden="true"><use href="#ic-zap"/></svg><span>WhatsApp</span></a>
 
-<script src="assets/js/main.js"></script>
+<script src="assets/js/v2.js"></script>
 </body>
 </html>

@@ -2,3 +2,11 @@
 Thumbs.db
 .vscode/
 AGENTS.md
+
+# Páginas fora do site publicado (propostas e projetos à parte)
+novalooksom-3d.html
+sara-rocha-portfolio.html
+prototipo/
+
+# Fotos originais dos produtos (alta resolução, pesadas). O site usa as versões leves de assets/img/fotos/
+assets/img/produtos/
