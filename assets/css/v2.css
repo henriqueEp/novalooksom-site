@@ -143,9 +143,14 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 .topo {
   position: sticky; top: 0; z-index: 50;
+  border-bottom: 1px solid transparent; transition: border-color .3s;
+}
+/* O fundo desfocado fica num pseudo-elemento: backdrop-filter no próprio .topo
+   prenderia o menu fixo do celular dentro do topo (o menu ficava cortado). */
+.topo::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
   background: rgba(232, 227, 225, .92);
   -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
-  border-bottom: 1px solid transparent; transition: border-color .3s;
 }
 .topo.is-rolado { border-bottom-color: var(--linha); }
 .topo .wrap { height: var(--header-h); display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
@@ -168,6 +173,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
   border: 1px solid var(--linha-forte); border-radius: 2px; background: transparent; cursor: pointer;
 }
 .menu-btn svg { width: 22px; height: 22px; }
+.menu-btn__fechar, .menu-btn[aria-expanded="true"] .menu-btn__abrir { display: none; }
+.menu-btn[aria-expanded="true"] .menu-btn__fechar { display: block; }
 
 /* ---------- 5. Hero ---------- */
 .hero { padding-block: clamp(2.2rem, 5vw, 4.5rem) clamp(3rem, 6vw, 5.5rem); }

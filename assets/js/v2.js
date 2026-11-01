@@ -9,6 +9,8 @@
   var menu = document.getElementById('menu');
   if (btn && menu) {
     var setMenu = function (aberto) {
+      // o menu começa onde o topo termina (a faixa de cima pode estar na tela ou não)
+      if (aberto) menu.style.top = Math.round(btn.closest('.topo').getBoundingClientRect().bottom) + 'px';
       menu.classList.toggle('is-aberto', aberto);
       btn.setAttribute('aria-expanded', String(aberto));
       btn.setAttribute('aria-label', aberto ? 'Fechar menu' : 'Abrir menu');
