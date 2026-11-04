@@ -135,8 +135,8 @@ button, input, select, textarea { font: inherit; color: inherit; }
 
 /* ---------- 4. Faixa B2B e topo ---------- */
 .faixa { background: var(--grafite); color: var(--aluminio); font: 400 .78rem/1.3 var(--mono); }
-.faixa .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 2.2rem; }
-.faixa__txt { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.faixa .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 2.2rem; padding-block: .35rem; }
+.faixa__txt { min-width: 0; } /* sem seletor de idioma, o texto quebra linha no celular em vez de cortar com reticências */
 .idiomas { display: flex; gap: .9rem; flex: none; }
 .idiomas a { text-decoration: none; }
 .idiomas a:hover, .idiomas a[aria-current] { color: var(--cobre-claro); }
