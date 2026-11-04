@@ -1,6 +1,6 @@
 # Nova Look Som
 
-> Fábrica brasileira de bobinas para alto-falantes e de reparos para drivers e tweeters, com 28 anos no mercado, em Taboão da Serra (Grande São Paulo). Trabalha sob medida, no projeto ou na amostra do cliente, e vende só para empresas (fabricantes de alto-falantes e lojas de som) de todo o Brasil e de países da América Latina. Também vende drivers.
+> Fábrica brasileira de bobinas para alto-falantes e de reparos para drivers e tweeters, com 28 anos no mercado, em Taboão da Serra (Grande São Paulo). Trabalha sob medida, no projeto ou na amostra do cliente, e vende só para empresas (fabricantes de alto-falantes e lojas de som) de todo o Brasil e de países da América Latina.
 
 - Bobinas: simples ou duplas, para woofers, subwoofers e médios; corpo de kapton, alumínio ou fibra; fio de cobre, alumínio ou CCAW.
 - Reparos: para driver de compressão, corneta, tweeter e super tweeter; diafragma fenólico, poliimida ou titânio, com bobina própria e terminais montados no aro.

@@ -69,7 +69,7 @@ Se já existir um registro A `@` apontando para "Parked"/estacionamento da GoDad
 ## Confirmar antes de publicar
 
 - [ ] Os clientes autorizam o uso dos logos no site?
-- [ ] Drivers: marca própria ou revenda? (se revenda, ter autorização da marca)
+- [x] Drivers: a fábrica não vende drivers (decisão de nov/2026)
 - [ ] Prazo médio de produção e pedido mínimo
 - [ ] Horário de atendimento, CNPJ e redes sociais (Instagram/LinkedIn)
-- [ ] Fotos dos produtos (bobinas e drivers em fundo neutro), quando houver
+- [ ] Fotos dos produtos (bobinas e reparos em fundo neutro), quando houver
