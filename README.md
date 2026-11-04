@@ -12,9 +12,12 @@ Site institucional de uma página (HTML + CSS + JS puro, sem dependências e sem
 ## Estrutura
 
 ```
-index.html                 página inteira (textos, seções, contatos)
-assets/css/style.css       visual (cores no topo, em :root)
-assets/js/main.js          menu do celular + formulário que abre o WhatsApp
+index.html                 página principal (novo visual)
+assets/css/v2.css          visual da página principal (cores no topo, em :root)
+assets/js/v2.js            menu, interações e formulário da página principal
+assets/img/fotos/          fotos dos produtos usadas na página principal
+assets/css/style.css       visual das outras páginas
+assets/js/main.js          menu e formulário das outras páginas
 assets/img/favicon.svg     ícone da aba
 assets/img/clientes/       logos dos clientes já padronizados (400x160, fundo transparente)
 CNAME                      domínio para o GitHub Pages
@@ -25,7 +28,7 @@ robots.txt / sitemap.xml   para o Google
 
 | O quê | Onde |
 |---|---|
-| WhatsApp | `index.html` (procure `5511977194026`) **e** `assets/js/main.js` (variável `WHATSAPP`) |
+| WhatsApp | todas as páginas `.html` (procure `5511977194026`) **e** a variável `WHATSAPP` em `assets/js/v2.js` e em `assets/js/main.js` |
 | E-mail | `index.html` (procure `atendimento@novalooksom.com.br`) |
 | Endereço | `index.html` (seção `#contato` e o bloco JSON-LD no `<head>`) |
 | Cores | `assets/css/style.css`, bloco `:root` |
