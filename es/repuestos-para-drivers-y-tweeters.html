@@ -150,6 +150,8 @@
   <!-- Cloudflare Web Analytics (sem cookies) -->
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "b05c9703646f45229eb1f90c8fb7e24c"}'></script>
   <!-- /seo:auto -->
+  <!-- Microsoft Clarity: mapa de cliques e rolagem -->
+  <script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","zf4q22u8i5");</script>
 </head>
 <body>
 
@@ -438,5 +440,7 @@
 </a>
 
 <script src="../assets/js/main.js"></script>
+<div id="aviso-cookies" style="display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:200;max-width:560px;margin:0 auto;padding:14px 16px;background:#15171a;color:#e8e3e1;font:14px/1.45 system-ui,sans-serif;border-radius:6px;box-shadow:0 10px 30px rgba(0,0,0,.35);gap:12px;align-items:center"><span id="aviso-cookies-txt"></span><button type="button" style="flex:none;padding:8px 14px;border:0;border-radius:4px;background:#c26a2e;color:#fff;font:600 14px system-ui,sans-serif;cursor:pointer">OK</button></div>
+<script>(function(){var k='nls-aviso-cookies',el=document.getElementById('aviso-cookies');try{if(localStorage.getItem(k))return}catch(e){}var l=(document.documentElement.lang||'pt').slice(0,2),t={pt:'Usamos cookies do Microsoft Clarity para entender como o site é usado e melhorá-lo. Não guardamos o que você digita no formulário.',es:'Usamos cookies de Microsoft Clarity para entender cómo se usa el sitio y mejorarlo. No guardamos lo que escribe en el formulario.',en:'We use Microsoft Clarity cookies to understand how the site is used and improve it.'};document.getElementById('aviso-cookies-txt').textContent=t[l]||t.en;el.style.display="flex";el.querySelector('button').onclick=function(){el.style.display="none";try{localStorage.setItem(k,'1')}catch(e){}};})();</script>
 </body>
 </html>
